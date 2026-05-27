@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#=================================================================
+# DOM Factory Project Generator
+# Copyright (c) 2026 SupFox
+#
+# Licensed under the MIT License (if applicable)
+#=================================================================
+
+
 # Dossier racine
 BASE_DIR="machines"
 
