@@ -1,5 +1,8 @@
 //Pour mettre un fichier dans le micro onde
- $('#add').on('click', ()=>{$('#addi').click()});
+ $('#add').on('click', ()=>{
+    $('#addi').click();
+    $('#audio-a').get(0).play();
+});
 
 //État du micro onde
 $('#porte').on('click', ()=>{
