@@ -25,6 +25,12 @@
   border: 2px solid pink; 
 }
 
+#add {
+  display: flex;
+  top: 50px;
+  left: 50px;
+}
+
 .fonctionnalites{
   display: inline;
   height: 500px;

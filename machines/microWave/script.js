@@ -6,12 +6,14 @@ $('#add').on('click', ()=>{
     $('#audio-a').trigger('play');
 });
 
+//.change()
 $('#addi').change(()=>{
     file_plat1 = $('#addi')[0];
     let file_plat2 = file_plat1.item(0);
     let filef = file_plat2.name
     console.log(filef);
 });
+
 
 //État du micro onde
 $('#porte').on('click', ()=>{
@@ -21,6 +23,10 @@ $('#porte').on('click', ()=>{
         $('#porte').removeClass('fermer');
         $('#porte').addClass('ouvert');
         $('#audio-o').trigger('play');
+
+        if(!$("audio-d").paused){
+            $('#audio-d').trigger('pause');
+        }
     }
     else{
         $('#porte').text('Fermer');
@@ -32,6 +38,7 @@ $('#porte').on('click', ()=>{
 });
 
 $('#start').on('click', ()=>{
+    if($('#porte').hasClass("ouvert")){return;}
     $('#audio-d').trigger('play');
 
 });
@@ -44,3 +51,5 @@ $('#stop').on('click', ()=>{
 $('#reset').on('click', ()=>{
     $('#audio-d').trigger('pause').prop('currentTime', 0)
 });
+
+
